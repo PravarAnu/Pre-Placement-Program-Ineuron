@@ -1,6 +1,9 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
 long long int minValue(int a[], int b[], int n)
     {
-        // Your code goes here
         sort(a,a+n);
         sort(b,b+n);
         

@@ -4,6 +4,7 @@
 #include <vector>
 using namespace std;
 
+
 vector<int> findOriginalArray(vector<int> &changed) {
     int n = changed.size();
     if (n & 1)
