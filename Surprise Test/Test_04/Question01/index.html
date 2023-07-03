@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>CSS Positioning</title>
+</head>
+
+<body>
+    <div class="sticky">
+        <p>
+            The sticky property is used as a positioning for this box and you can see that this box is sticked on the
+            top when you scroll the screen. You can also see the code below
+        </p>
+        <code>
+            position: sticky;
+            background-color: rgb(3, 87, 59);<br/>
+            top:0px;
+        </code>
+    </div>
+
+    <div class="static">
+        <p>
+            This is the default state (i.e static) of css positioning and the box is positioned according to the normal
+            flow. The top, right, bottom, left and z-index properties have no effect.
+        </p>
+
+        <code>
+            position: static;
+            background-color: rgb(255, 0, 0);<br/>
+            margin-left: 200px;
+        </code>
+    </div>
+
+    <div class="fixed">
+        <p>
+            This is fixed state of this box where the box is removed from the normal document flow, and no space is
+            created for the box in the page layout. Using this positioning you can fix the position of any element.
+        </p>
+        <code>
+            position: fixed;
+            background-color: rgb(98, 98, 3);<br/>
+            left: 400px;
+        </code>
+    </div>
+
+
+
+    <div class="relative">
+        <p>
+            The element is positioned according to the normal flow of the document, and then offset relative to itself
+            based on the values of top, right, bottom, and left.
+        </p>
+        <code>
+            position: relative;
+            background-color: rgb(3, 80, 3);<br/>
+            top:200px;<br/>
+            left: 600px;
+        </code>
+    </div>
+
+    <div class="absolute">
+        <p>The element is removed from the normal document flow, and no space is created for the element in the page
+            layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed
+            relative to the initial containing block. Its final position is determined by the values of top, right,
+            bottom, and left.</p>
+
+        <code>
+            position: absolute;
+            background-color: rgb(165, 42, 42);<br/>
+            top: 800px;<br/>
+            left: 800px
+        </code>
+    </div>
+</body>
+
+</html>

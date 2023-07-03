@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+div{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+p{
+    color: aliceblue;
+    padding: 10px;
+}
+
+code{
+    background-color: black;
+    color: white;
+}
+
+.sticky{
+    position: sticky;
+    background-color: rgb(3, 87, 59);
+    top:0px;
+}
+
+.static{
+    position: static;
+    background-color: rgb(255, 0, 0);
+    margin-left: 200px;
+}
+
+.fixed{
+    position: fixed;
+    background-color: rgb(98, 98, 3);
+    left: 400px;
+}
+
+.relative{
+    position: relative;
+    background-color: rgb(3, 80, 3);
+    top:200px;
+    left: 600px;
+}
+
+.absolute{
+    position: absolute;
+    background-color: rgb(165, 42, 42);
+    top: 800px;
+    left: 800px;
+}
