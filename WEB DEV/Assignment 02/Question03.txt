@@ -1,0 +1,11 @@
+Q. What is VW/VH & How is it different from PX?
+
+Ans-
+- VW (viewport width) and VH (viewport height) are CSS units of measurement that allow you to size elements relative to the dimensions of the viewport (the visible area of the browser window).
+
+- VW (Viewport Width): 1 VW is equal to 1% of the viewport's width. For example, if the viewport width is 1000 pixels, 1 VW would be equal to 10 pixels (1000 * 1%).
+
+- VH (Viewport Height): 1 VH is equal to 1% of the viewport's height. For example, if the viewport height is 800 pixels, 1 VH would be equal to 8 pixels (800 * 1%).
+
+These units are useful for creating responsive designs that adapt to different screen sizes and orientations. They allow you to size elements proportionally based on the available space in the viewport, rather than fixed pixel values.
+The main difference between VW/VH and PX (pixels) is that VW/VH are relative units based on the viewport size, while PX is an absolute unit that represents a specific number of pixels.

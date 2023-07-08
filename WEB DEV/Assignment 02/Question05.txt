@@ -1,0 +1,6 @@
+Q. How is Border-box different from Content Box? 
+
+Ans-
+- Content-Box: By default, elements use the content-box box-sizing model. In this model, the specified width and height of an element only include the content area. The padding and border are added on top of the specified width and height. This means that the total width and height of the element will be larger when accounting for padding and border.
+
+- Border-Box: When using the border-box box-sizing model, the specified width and height of an element include both the content area and any padding and border. In this model, the padding and border are subtracted from the specified width and height to determine the available content area.

@@ -1,0 +1,8 @@
+Q. What is the difference between Inline, Inline Block and Block? 
+
+Ans-
+Inline: Elements with the display property set to "inline" are rendered inline within the content flow. They do not create line breaks before or after themselves, and they only take up the space necessary to accommodate their content.
+
+Inline-Block: The "inline-block" value combines aspects of both "inline" and "block". Elements with the display property set to "inline-block" are rendered inline within the content flow but can have block-level properties like width, height, margins, and padding.
+
+Block: Elements with the display property set to "block" generate   block-level boxes and create line breaks before and after themselves. They occupy the entire width available by default, unless a specific width is set.

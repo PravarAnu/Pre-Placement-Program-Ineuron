@@ -1,0 +1,65 @@
+Q. What’s Grid & Flex and difference between them?
+
+Ans-
+- Flexbox is a one-dimensional layout system designed for laying out elements in a single row or column. It's useful for creating flexible and dynamic layouts, especially for components that need to adjust their size or alignment to accommodate varying content.
+
+Key features of Flexbox:
+One-dimensional: Flexbox operates along either the horizontal (row) or vertical (column) axis.
+Content order: Flexbox allows you to easily reorder elements visually, regardless of their order in the HTML markup.
+Flexible sizing: Flexbox provides flexible options for sizing elements, allowing them to expand, shrink, or distribute space evenly.
+Alignment: Flexbox offers powerful alignment capabilities, allowing you to control the positioning of elements within a container.
+
+For example: 
+HTML-
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+
+CSS-
+.wrapper {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper > div {
+  flex: 1 1 150px;
+}
+
+
+- Grid is a two-dimensional layout system that enables you to create complex and grid-like layouts. It provides a more extensive set of features compared to Flexbox and allows you to define rows and columns to position and align elements precisely.
+
+Key features of Grid Layout:
+Two-dimensional: Grid operates on both the horizontal and vertical axes, allowing you to define rows and columns to create a grid-like structure.
+Grid lines and tracks: Grid lets you define explicit grid lines and tracks, allowing you to control the placement and size of elements precisely.
+Grid items: Elements inside a grid container can be placed in any cell, and their size and alignment can be controlled at both the row and column level.
+Responsive layouts: Grid makes it easier to create responsive designs by defining different grid structures for different screen sizes.
+
+For example: 
+HTML-
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+
+CSS-
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+- Main differences between Flexbox and Grid:
+Dimension: Flexbox is one-dimensional (row or column), while Grid is two-dimensional (rows and columns).
+
+Layout control: Grid provides more precise control over the placement of elements within the grid structure, whereas Flexbox focuses on flexible and dynamic layouts.
+
+Content order: Flexbox allows easy reordering of elements, while Grid follows the order of elements in the HTML markup.
+
+Complexity: Grid has a more extensive feature set and can handle complex layouts, making it suitable for creating large-scale designs. Flexbox is simpler and more suitable for smaller components or single-axis layouts.

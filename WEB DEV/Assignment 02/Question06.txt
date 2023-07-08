@@ -1,0 +1,15 @@
+Q. What’s z-index and How does it Function? 
+
+Ans-
+The z-index property assigns a numerical value to an element, determining its position in the stacking order. Elements with higher z-index values will appear on top of elements with lower values. If two elements have the same z-index, their stacking order will be determined by their position in the HTML structure, with the element that appears later in the code stacking on top.
+
+The z-index property can be applied to positioned elements whose values are "relative", "absolute", and "fixed". By default, positioned elements have a z-index value of auto, which means their stacking order is determined by the parent-child hierarchy.
+For Example : 
+.my-element-1{
+      Position: absolute;
+      Z-index: 2;
+}
+.my-element-2{
+      Position: absolute;
+      Z-index: 1 
+}

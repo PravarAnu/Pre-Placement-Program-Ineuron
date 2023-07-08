@@ -1,0 +1,27 @@
+What is Box Model in CSS & Which CSS Properties are part of it?
+The box model is a concept of CSS that describes how elements are structured and displayed on a webpage. It defines the content area, padding, border, and margin of an element. The box model helps determine the overall size, spacing, and positioning of elements.
+
+|--------------------------------------------|
+|                  Margin                    |
+|    |----------------------------------|    |
+|    |             Border               |    |
+|    |  |--------------------------|    |    |
+|    |  |         Padding          |    |    |
+|    |  |  |------------------|    |    |    |
+|    |  |  |      Content     |    |    |    |
+|    |  |  |                  |    |    |    |
+|    |  |  |------------------|    |    |    |
+|    |  |                          |    |    |
+|    |  |--------------------------|    |    |
+|    |                                  |    |
+|    |----------------------------------|    |
+|                                            |
+|--------------------------------------------|
+
+- Content - The content area is the space where the actual content of an element, such as text, images, or other media, is displayed. It is defined by the width and height properties.
+
+- Padding - Padding is the space between the content area and the element's border. It provides spacing and creates a visual separation between the content and the border. Padding can be set independently for each side of an element using properties like “padding-top”, “padding-right”, “padding-bottom”, and “padding-left”.
+
+- Border - The border surrounds the content area and padding and provides a visible boundary for the element. It can have a specified width, style, and color using the “border-width”, “border-style”, and “border-color” properties, respectively.
+
+- Margin - The margin is the space outside the border and creates a gap between adjacent elements. It provides spacing between elements and controls their positioning in relation to other elements. Like padding, margins can be set independently for each side of an element using properties like “margin-top”, “margin-right”, “margin-bottom”, and “margin-left”.
