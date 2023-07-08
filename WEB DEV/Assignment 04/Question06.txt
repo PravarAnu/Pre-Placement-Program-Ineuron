@@ -1,0 +1,23 @@
+Q. What is template literals in ES6 and how do you use them?
+
+Ans - 
+Template literal is a new way of writing string template along with placeholder for variables.
+
+To use them we just remove the quote sign from the start and end of the string.
+
+let str = "Hello my name is: Pravar"; // Normal way of writing string
+
+let's change it in template literal
+let str = `Hello my name is: Pravar`;
+
+
+if there is a variable that we want to use with a string we have this functionality also using template literals
+
+let name = "Pravar";
+
+let str = `Hello my name is: ${name}`;
+
+console.log(str);    // Output : Hello my name is: Pravar
+
+
+You have to just add backticks (`) in start and end of string and if you want to use any variable inside template literal then you can inscribe any varibale name inside surly braces started with a dollar sign (${}).

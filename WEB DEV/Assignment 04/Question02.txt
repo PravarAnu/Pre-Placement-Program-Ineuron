@@ -1,0 +1,23 @@
+Q. Explain Temporal Dead Zone?
+
+Ans-
+
+If we are trying to access variable defined with let and const keyword before it's initialization then it will give a Reference Error.
+Accessing a variable before it's initialization is also known as temporal dead zone for the variable where it can't be access.
+
+
+
+
+Let's understand with an example:
+
+{
+	// The temporal dead zone for variable x has started
+	// The temporal dead zone for variable x continues
+	Console.log(x); // This will return Reference Error
+	
+	Let x = "Hello" // The temporal dead zone for variable x ends here
+	// After the temporal dead zone ended for the variable x.
+	// Now you can access the variable x
+	
+	Console.log(x) // Works fine
+}

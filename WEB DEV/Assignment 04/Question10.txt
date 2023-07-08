@@ -1,0 +1,4 @@
+Q. What is the purpose of the spread operator (...) in ES6?
+
+Ans-
+Spread Operator is a very simple and powerful feature introduced in the ES6 standard of JavaScript, which helps us to write nicer and shorter code. The JavaScript spread operator is denoted by three dots (…). The spread operator helps the iterable objects to expand into individual elements. Iterable objects are those on which we can use a loop, for example, Array, Map, Set, etc. In other words, the spread operator allows us to copy all elements from the existing array or object into another array or object.

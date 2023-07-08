@@ -1,0 +1,23 @@
+Q. What is Hoisting in Javascript?
+
+Ans-
+Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their respective scope during the compilation phase. This means that they are effectively lifted or hoisted to the top of their containing scope, allowing you to use them before they are declared in your code.
+
+Let's look at an example to understand hoisting in JavaScript:
+
+console.log(x); // Output: undefined
+var x = 5;
+
+In the above code, the variable "x" is accessed before it is declared and initialized. However, due to hoisting, the declaration of "x" is moved to the top of its scope during compilation. As a result, the "console.log()" statement does not throw an error, but it outputs "undefined". This is because hoisting only moves the declaration, not the initialization.
+
+The same hoisting behavior applies to function declarations:
+
+foo(); // Output: "Hello!"
+
+function foo() {
+  console.log("Hello!");
+}
+
+In this case, the function "foo()" is called before its actual declaration in the code. However, due to hoisting, the function declaration is moved to the top, allowing the call to execute successfully.
+
+The new variable declaration types which are ‘let’ and ‘const’ are not hoisted.

@@ -1,0 +1,20 @@
+Q. Difference between var & let?
+
+Ans-
+In JavaScript, both the keywords var and let are used to declare variables.
+
+The let keyword was introduced in the later version of JavaScript known as ES6(ES2015). And it's the preferred way to declare variables.
+
+JavaScript let Vs var
+Here's the overview of the differences between let and var.
+
+let
+- let is block-scoped
+- let does not allow to redeclare variables.
+- Hoisting does not occur in let.
+
+
+var
+- var is function scoped.
+- var allows to redeclare variables.
+- Hoisting occurs in var.
