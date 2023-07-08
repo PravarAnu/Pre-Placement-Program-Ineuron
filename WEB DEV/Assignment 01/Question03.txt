@@ -1,0 +1,12 @@
+Q. Differentiate between HTML Tags and Elements?
+
+Ans-
+Html tags are the building blocks of an HTML document. They are used to mark up and define the structure and presentation of content within the document. Tags are enclosed in angle brackets (i.e < and >).
+For example :- <p>, <div>, <span>, <h1>, etc.
+There are three types of html tags: 
+Opening - <h1>, <p>, <span> …
+Closing - </h1>, </p>, </span> …
+Self-Closing - <hr/>, <br/>
+
+Html elements consist of one or more HTML tags and the content nested between the opening and closing tags. An Html element represent a specific part of a webpage and can include both the tag and its content. 
+For example :- <p> Hello! How are Khana Kha Ke Jana </p>

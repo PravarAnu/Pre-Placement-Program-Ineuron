@@ -1,0 +1,15 @@
+Q.What is the difference between html tag and attribute and give examples of some global attributes?
+
+Ans-
+Html tags - HTML tags are used to define the structure and elements of an HTML document. They are enclosed in angle brackets (<>) and come in pairs: an opening tag and a closing tag. The opening tag represents the start of an element, while the closing tag represents its end. Tags are used to mark up and define the structure of content within an HTML document.
+For example : <p>This is Funsukh Wangdu </p>
+ 
+Html attributes - HTML attributes provide additional information or configuration options to HTML elements. They are specified within the opening tag of an element and provide extra characteristics or behavior to the element. Attributes consist of a name-value pair, where the attribute name describes the specific characteristic, and the attribute value provides its corresponding value.
+For example: <p lang=”lus”>This is Funsukh Wangdu </p>
+
+Global attributes - These attributes are those attributes that can be used with any html elements. They provide common functionality and behavior that are applicable across various elements. Some of the global attributes are given as follows - 
+Class - Specifies one or more CSS classes to associate with an element, allowing for styling and selecting elements with CSS or JavaScript.
+Id - Provides a unique identifier for an element, enabling targeting of specific elements for styling or scripting purposes.
+Style - Allows inline CSS styling for an element, providing a way to apply specific styles directly to the element.
+Title - Provides a tooltip or additional information about an element when hovering over it.
+Lang - Specifies the language of the element's content.
