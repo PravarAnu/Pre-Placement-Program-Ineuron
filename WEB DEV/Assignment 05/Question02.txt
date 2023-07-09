@@ -1,0 +1,41 @@
+Q. What are Web Apis ?
+
+Ans-
+A Web API is a developer's dream.
+    It can extend the functionality of the browser
+    It can greatly simplify complex functions
+    It can provide easy syntax to complex code
+
+All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.
+
+For example, the Geolocation API can return the coordinates of where the browser is located.
+
+Example
+Get the latitude and longitude of the user's position:
+
+const myElement = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    myElement.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  myElement.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+
+
+
+There are many web apis. Some of them are listed below:
+    Battery API
+    Canvas API
+    DOM
+    File API
+    Sensor API
+    Web Share API
+    ....

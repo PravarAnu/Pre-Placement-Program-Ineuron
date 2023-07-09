@@ -1,0 +1,37 @@
+Q. What are Promises & Explain Some Three Methods of Promise
+
+Ans-
+Promises are objects in JavaScript that represent the eventual completion (or failure) of an asynchronous operation. They are used for handling asynchronous code and provide a more structured and manageable way to deal with asynchronous tasks.
+
+Promises have three states:
+
+1. Pending: The initial state when the promise is created and the asynchronous operation is still in progress.
+2. Fulfilled: The state when the asynchronous operation is successfully completed, and the promise is resolved with a value.
+3. Rejected: The state when the asynchronous operation encounters an error or fails, and the promise is rejected with a reason or an error.
+
+Here are three commonly used methods of a Promise object:
+
+1. then(): The then() method is used to handle the fulfillment of a promise. It takes two arguments: a callback function to be executed when the promise is fulfilled, and an optional callback function to handle rejection. The then() method returns a new promise, allowing for chaining multiple promises together.
+
+   somePromise.then(
+     function(result) {
+       // handle fulfillment
+     },
+     function(error) {
+       // handle rejection
+     }
+   );
+
+
+2. catch(): The catch() method is used to handle the rejection of a promise. It is similar to the rejection callback provided in the then() method, but specifically handles the case when the promise is rejected. It allows for centralized error handling instead of attaching a rejection callback to each then() method in the promise chain.
+
+   somePromise.catch(function(error) {
+     // handle rejection
+   });
+
+
+3. finally(): The finally() method is used to specify a callback function to be executed regardless of whether the promise is fulfilled or rejected. It is typically used to perform cleanup or finalization tasks that need to be done after the promise settles. The finally() method does not receive any arguments and does not affect the promise's value or state.
+
+   somePromise.finally(function() {
+     // perform cleanup or finalization
+   });

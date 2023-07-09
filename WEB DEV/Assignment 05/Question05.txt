@@ -1,0 +1,18 @@
+Q. What are Callbacks &  Callback Hell ?
+
+Ans-
+Callbacks are nothing but functions that take some time to produce a result.
+Usually, these async callbacks (async short for asynchronous) are used for accessing values from databases, downloading images, reading files, etc.
+As these take time to finish, we can neither proceed to the next line because it might throw an error saying unavailable nor we can pause our program.
+So we need to store the result and call back when it is complete.
+
+
+This is a big issue caused by coding with complex nested callbacks. Here, each and every callback takes an argument that is a result of the previous callbacks. In this manner, The code structure looks like a pyramid, making it difficult to read and maintain. Also, if there is an error in one function, then all other functions get affected. 
+
+
+JavaScript provides an easy way of escaping from callback hell. This is done by event queue and promises.
+A promise is a returned object from any asynchronous function, to which callback methods can be added based on the previous function’s result.
+Promises use .then() method to call async callbacks. We can chain as many callbacks as we want and the order is also strictly maintained.
+Promises use .fetch() method to fetch an object from the network. It also uses .catch() method to catch any exception when any block fails.
+So these promises are put in the event queue so that they don’t block subsequent JS code. Also once the results are returned, the event queue finishes its operations.
+There are also other helpful keywords and methods like async, wait, set timeout() to simplify and make better use of callbacks.

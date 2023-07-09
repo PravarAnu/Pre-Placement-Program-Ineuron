@@ -1,0 +1,26 @@
+Q. Explain SetTimeOut and setInterval ?
+
+Ans-
+    JavaScript SetTimeout and SetInterval are the only native function in JavaScript that is used to run code asynchronously, it means allowing the function to be executed immediately, there is no need to wait for the current execution completion, it will be for further execution.
+
+    JavaScript setTimeout() Method: This method executes a function, after waiting a specified number of milliseconds. 
+
+    Syntax:
+
+    window.setTimeout(function, milliseconds);
+    Parameter: There are two parameters accepted by this method
+
+    function: the first parameter is a function to be executed
+    milliseconds: which indicates the number of milliseconds before the execution takes place.
+
+
+
+    JavaScript setInterval() Method: The setInterval() method repeats a given function at every given time interval. 
+
+    Syntax:
+
+    window.setInterval(function, milliseconds);
+    Parameter: There are two parameters that accepted by this method
+
+    function: the first parameter is the function to be executed
+    milliseconds: indicates the length of the time interval between each execution.

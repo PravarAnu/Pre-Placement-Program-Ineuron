@@ -1,0 +1,22 @@
+Q. Explain Purpose of Try and Catch Block & Why do we need it?
+
+Ans - 
+The purpose of the try and catch block in JavaScript is to handle exceptions or errors that may occur during the execution of code. It allows you to gracefully handle and recover from unexpected situations that could otherwise cause your program to crash or produce incorrect results.
+
+Here's how the try and catch block works:
+
+1. The code that might potentially throw an exception is placed inside the try block.
+2. If an exception is thrown within the try block, the execution of the code inside the try block is immediately stopped.
+3. The control is transferred to the catch block, which contains code to handle the exception. The catch block specifies an identifier (often called the error variable) that will hold the information about the thrown exception.
+4. The code inside the catch block is executed, providing an opportunity to handle the exception appropriately. This could involve logging an error message, performing alternative actions, or gracefully recovering from the error situation.
+5. After executing the catch block, the program continues executing the remaining code after the try-catch construct.
+
+The try-catch block is essential for robust error handling and helps in maintaining the stability and reliability of your code. Here are some reasons why we need it:
+
+1. Error handling: The primary purpose of the try-catch block is to catch and handle errors or exceptions that occur during the execution of code. It allows you to gracefully handle exceptional situations, providing an opportunity to log errors, display user-friendly messages, or take corrective actions.
+
+2. Preventing program crashes: By catching exceptions, you prevent your program from crashing abruptly. Instead of halting the execution and displaying an error message to the user, you can handle the error gracefully and continue the program's execution.
+
+3. Fallback mechanisms: The catch block allows you to define alternative strategies or fallback mechanisms when an error occurs. You can provide default values, use backup resources, or attempt alternative approaches to ensure that your program can continue running without interruption.
+
+4. Debugging and logging: The try-catch block enables you to capture and log detailed information about the exception, which can be invaluable for debugging purposes. By logging error messages, stack traces, and other relevant information, you can diagnose issues and identify the root causes of errors more effectively.

@@ -1,0 +1,25 @@
+Q. Explain Fetch.
+
+Ans -
+Fetch is a built-in web API in JavaScript that provides an easy way to make HTTP requests and interact with web servers. It allows you to send network requests to fetch resources, such as JSON data, HTML files, images, or any other type of data, from a server.
+
+Here's an overview of how to use fetch:
+
+javascript
+Copy code
+fetch(url, options)
+  .then(response => {
+    // Handle the response
+  })
+  .catch(error => {
+    // Handle errors
+  });
+
+
+The fetch function takes at least one argument, which is the URL of the resource you want to fetch. It returns a promise that resolves to the response object representing the result of the request.
+
+The options argument is optional and allows you to customize the request with additional parameters such as headers, request method (GET, POST, etc.), body content, and more.
+
+After calling fetch, you typically chain a .then() method to handle the response when the promise is fulfilled. The response object provides various methods and properties to access the response data, including json() to parse the response as JSON, text() to get the response as plain text, and blob() to get the response as a binary Blob.
+
+If an error occurs during the request, the promise is rejected, and you can handle the error by chaining a .catch() method. The error object can provide information about the cause of the error, such as network issues or server-side errors.
