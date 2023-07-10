@@ -1,0 +1,49 @@
+Q. What’s Super Keyword & What it does?
+
+Ans - 
+In JavaScript, the `super` keyword is used to call functions or access properties on an object's parent or superclass. It is often used within a subclass to invoke the constructor or methods of the superclass, providing a way to extend or override their functionality.
+
+The `super` keyword can be used in two main contexts:
+
+1. Accessing the Parent Constructor: When creating a subclass, the `super` keyword is used in the subclass's constructor to call the constructor of its superclass. This ensures that the initialization code in the superclass constructor is executed before the subclass-specific code.
+
+2. Calling Parent Class Methods: The `super` keyword is also used within methods of a subclass to invoke the corresponding method in the superclass. This allows the subclass to override and extend the behavior of the superclass method while still utilizing the original implementation.
+
+Here's an example to demonstrate the usage of the `super` keyword in JavaScript:
+
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Calling the parent constructor
+    this.breed = breed;
+  }
+
+  speak() {
+    super.speak(); // Calling the parent class method
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog('Buddy', 'Labrador');
+dog.speak();
+
+
+In the example above, the `Animal` class represents a superclass with a constructor and a `speak()` method. The `Dog` class extends the `Animal` class using the `extends` keyword.
+
+Within the `Dog` class, the `super(name)` statement is used in the `Dog` constructor to call the `Animal` constructor with the `name` parameter. This ensures that the `name` property is properly initialized in the `Dog` object, utilizing the functionality of the superclass.
+
+The `speak()` method in the `Dog` class overrides the `speak()` method of the `Animal` class. Within the overridden method, `super.speak()` is used to invoke the `speak()` method of the superclass, which displays the default animal sound. The `speak()` method in the `Dog` class then adds additional behavior specific to dogs by logging a bark sound.
+
+When the `speak()` method is called on the `dog` object, it first invokes the `speak()` method of the `Animal` class through `super.speak()`, displaying the default animal sound, and then adds the bark sound specific to dogs.
+
+In summary, the `super` keyword allows you to call the constructor or methods of the superclass within a subclass. It enables you to extend and override the behavior of the superclass while maintaining access to its functionality.

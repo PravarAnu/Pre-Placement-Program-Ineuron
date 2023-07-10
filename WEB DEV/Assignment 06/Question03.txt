@@ -1,0 +1,58 @@
+Q. What’s call, apply, bind Method & Difference Between them
+
+Ans-
+
+“.call()”, “.apply()”, and ".bind()" methods are used to manipulate the execution context and the value of "this" within a function. They allow you to explicitly set the context in which a function is called.
+
+The key differences between these methods lie in how they accept arguments and their immediate or deferred execution.
+
+".call()": This method invokes a function immediately, passing arguments individually.
+
+For example:
+
+const obj = { name: "Pravar" };
+
+function greet(message) {
+  console.log("${message}, ${this.name}!");
+}
+
+greet.call(obj, "Hello");
+
+Output:
+Hello, Pravar!
+
+In the above example, the "greet" function is called with the "obj" as the execution context using ".call()". The arguments are passed individually after the execution context.
+
+ ".apply()": This method invokes a function immediately, passing arguments as an array.
+
+For example:
+const obj = { name: "Anu" };
+
+function greet(message) {
+  console.log("${message}, ${this.name}!");
+}
+
+greet.apply(obj, ["Hi"]);
+
+Output:
+Hi, Anu!
+
+In this example, the "greet" function is called with the "obj" as the execution context using ".apply()". The arguments are passed as an array.
+
+".bind()": This method returns a new function with a bound execution context and optional preset arguments. The original function is not immediately invoked.
+
+For example:
+
+const obj = { name: "Uljulul" };
+
+function greet(message) {
+  console.log("${message}, ${this.name}!");
+}
+
+const boundGreet = greet.bind(obj);
+boundGreet("Hey");
+
+Output:
+Hey, Uljulul!
+
+In this example, ".bind()" returns a new function "boundGreet" that is permanently bound to the "obj" execution context. The original "greet" function is not executed until "boundGreet" is called.

@@ -1,0 +1,18 @@
+Q. Explain OOPs in Javascript.
+
+Ans-
+Object-Oriented Programming (OOP) is a programming paradigm that focuses on organizing code into objects that contain both data and behavior. JavaScript, although primarily a prototype-based language, supports several OOP concepts and features. Here's an explanation of key OOP concepts in JavaScript:
+
+ - Objects: In JavaScript, objects are the fundamental building blocks of OOP. An object is a collection of key-value pairs, where the keys are known as properties, and the values can be any data type or even other objects.
+
+ - Classes: JavaScript introduced the class syntax in ECMAScript 2015 (ES6) to provide a more familiar way to define objects and their behavior. A class serves as a blueprint or template for creating objects with similar properties and methods.
+
+ - Constructors: Constructors are special methods defined within a class that are automatically called when a new instance of the class is created using the new keyword. Constructors are used to initialize object properties and set up the initial state of the object.
+
+ - Inheritance: JavaScript supports prototypal inheritance, where objects can inherit properties and methods from other objects. Through the prototype chain, an object can access and reuse properties and methods defined in its prototype or ancestor objects.
+
+ - Encapsulation: Encapsulation is the concept of bundling data and related behavior together within an object. In JavaScript, you can achieve encapsulation by defining properties as either public (accessible from outside the object) or private (only accessible within the object). ES6 introduced the concept of private fields using the # prefix.
+
+ - Abstraction: Abstraction allows you to simplify complex systems by representing them with simpler models. In JavaScript, you can create classes and methods that abstract away implementation details and expose only the necessary interface to interact with objects.
+
+ - Polymorphism: Polymorphism means the ability of objects to take on different forms or behaviors based on their context. In JavaScript, polymorphism can be achieved through method overriding or method overloading.

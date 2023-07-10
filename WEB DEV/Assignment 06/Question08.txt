@@ -1,0 +1,56 @@
+Q. Whats Encapsulation and Purpose of it?
+
+Ans - 
+Encapsulation is a principle in object-oriented programming (OOP) that combines data and the methods that operate on that data into a single unit, known as an object. It involves hiding the internal implementation details of an object and exposing only the necessary interface to interact with it. Encapsulation promotes data integrity, security, and modularity in your code.
+
+In JavaScript, encapsulation is achieved through the use of classes and access modifiers (such as `public`, `private`, and `protected`). Although JavaScript doesn't have native access modifiers, you can use conventions and techniques to achieve encapsulation.
+
+The purpose of encapsulation in JavaScript (and OOP in general) is to:
+
+1. Data Protection and Security: Encapsulation helps protect data from unintended modification or direct access. By making properties private or implementing access control, you can ensure that data can only be modified through defined methods. This prevents accidental misuse or unauthorized access to data, improving security and data integrity.
+
+2. Abstraction: Encapsulation enables abstraction by separating the internal implementation details of an object from its external interface. By exposing a limited and well-defined set of methods to interact with an object, you can hide the complexity of the internal workings and provide a simpler, more intuitive interface for users of the object.
+
+3. Code Modularity and Maintenance: Encapsulation promotes code modularity by grouping related data and behaviors into a single object. This makes the codebase more organized, maintainable, and easier to understand. Changes or updates to the internal implementation of an object can be done without affecting the external code that uses the object, as long as the interface remains unchanged.
+
+4. Code Reusability: Encapsulation facilitates code reusability by creating self-contained objects with their own data and behaviors. These objects can be easily instantiated and used in different parts of your codebase without duplicating code or relying on global variables. This promotes efficient development and reduces code redundancy.
+
+Here's an example that demonstrates encapsulation in JavaScript:
+
+
+class BankAccount {
+  constructor(accountNumber, balance) {
+    this._accountNumber = accountNumber;
+    this._balance = balance;
+  }
+
+  deposit(amount) {
+    this._balance += amount;
+  }
+
+  withdraw(amount) {
+    if (amount <= this._balance) {
+      this._balance -= amount;
+    } else {
+      console.log("Insufficient balance.");
+    }
+  }
+
+  getBalance() {
+    return this._balance;
+  }
+}
+
+const account = new BankAccount("123456789", 1000);
+console.log(account.getBalance()); // Output: 1000
+
+account.deposit(500);
+console.log(account.getBalance()); // Output: 1500
+
+account.withdraw(200);
+console.log(account.getBalance()); // Output: 1300
+
+
+In the example above, the `BankAccount` class encapsulates the account number and balance as private properties (`_accountNumber` and `_balance`). These properties are accessed and modified through public methods (`deposit()`, `withdraw()`, `getBalance()`), which provide controlled access to the data.
+
+By encapsulating the properties and exposing only the necessary methods, the `BankAccount` class ensures that the account balance can be modified only through defined methods, and the internal implementation details are hidden from external code. This protects the integrity of the account data and provides a clear and controlled interface for interacting with the object.

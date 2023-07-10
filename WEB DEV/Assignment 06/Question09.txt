@@ -1,0 +1,41 @@
+Q. Explain Class in JavaScript?
+
+Ans-
+In JavaScript, the `class` keyword was introduced in ECMAScript 2015 (ES6) as a syntactical sugar to define classes and create objects based on those classes. It provides a more familiar and structured syntax for working with objects and implementing object-oriented programming (OOP) concepts.
+
+A class in JavaScript serves as a blueprint or template for creating objects with similar properties and behaviors. It encapsulates data (in the form of properties) and operations (in the form of methods) into a single entity. The `class` syntax makes it easier to define and work with objects in a more structured and organized manner.
+
+Here's the basic syntax for defining a class in JavaScript:
+
+class ClassName {
+  // Class body
+}
+
+
+Within the class body, you can define properties and methods. Properties represent the data associated with objects created from the class, while methods define the behaviors or operations that can be performed on those objects.
+
+Here's an example that demonstrates the usage of a class in JavaScript:
+
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayHello() {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+  }
+}
+
+const person1 = new Person('John', 25);
+person1.sayHello(); // Output: Hello, my name is John and I'm 25 years old.
+
+
+In the example above, the `Person` class is defined with a constructor and a `sayHello` method. The constructor is a special method that is automatically called when a new instance of the class is created. It initializes the `name` and `age` properties of the object.
+
+The `sayHello` method is defined within the class and can be called on instances of the class. It accesses the `name` and `age` properties using the `this` keyword and displays a greeting message.
+
+To create an object based on the class, you use the `new` keyword followed by the class name and any necessary arguments for the constructor. In this case, `person1` is an instance of the `Person` class, and the `sayHello` method can be called on it to display the greeting.
+
+In summary, a class in JavaScript provides a structured and reusable template for creating objects with shared properties and behaviors. It promotes code organization, code reusability, and encapsulation of data and operations into a single entity.

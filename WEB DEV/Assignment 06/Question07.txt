@@ -1,0 +1,52 @@
+Q.  Whats Inheritance and Purpose of it?
+
+Ans-
+Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class (called a subclass or derived class) to inherit properties and methods from another class (called a superclass or base class). In JavaScript, inheritance is achieved using prototype-based inheritance.
+
+The purpose of inheritance in JavaScript (and OOP in general) is to:
+
+1. Code Reusability: Inheritance promotes code reusability by allowing subclasses to inherit and reuse properties and methods defined in the superclass. Instead of rewriting the same code in multiple places, you can define it once in a superclass and have the subclasses inherit it.
+
+2. Modularity and Organization: Inheritance helps to organize and structure your codebase. By using a hierarchical relationship between classes, you can create a clear and logical hierarchy of objects with specialized behavior. This makes the codebase more modular, maintainable, and easier to understand.
+
+3. Overriding and Extension: Inheritance enables subclasses to override and extend the behavior of the superclass. Subclasses can provide their own implementation of inherited methods, modifying or extending the functionality as needed. This allows for customization and specialization while maintaining a common interface.
+
+4. Polymorphism: Inheritance supports polymorphism, which allows objects of different classes to be treated as instances of a common superclass. This provides flexibility in working with objects by using a single interface that can be applied to multiple related classes.
+
+Here's an example that demonstrates inheritance in JavaScript:
+
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+class Cat extends Animal {
+  speak() {
+    console.log(`${this.name} meows.`);
+  }
+}
+
+const dog = new Dog('Buddy');
+dog.speak(); // Output: Buddy barks.
+
+const cat = new Cat('Whiskers');
+cat.speak(); // Output: Whiskers meows.
+
+
+In the example above, the `Animal` class serves as the base class, and the `Dog` and `Cat` classes inherit from it using the `extends` keyword. The subclasses (`Dog` and `Cat`) inherit the `name` property and the `speak()` method from the superclass (`Animal`).
+
+By creating instances of `Dog` and `Cat`, we can access and invoke the inherited `speak()` method. Each subclass provides its own implementation of `speak()`, demonstrating the ability to override the behavior of the superclass method.
+
+In this way, inheritance allows you to create specialized classes (`Dog`, `Cat`) based on a common foundation (`Animal`), providing code reusability, customization, and polymorphic behavior.

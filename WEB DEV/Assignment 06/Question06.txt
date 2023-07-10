@@ -1,0 +1,67 @@
+Q. Whats Polymorphism and Purpose of it?
+
+Ans -
+Polymorphism is a key concept in object-oriented programming (OOP) that allows objects of different classes to be treated as instances of a common superclass. It enables you to use a single interface to represent different types of objects, providing flexibility and extensibility to your code.
+
+In JavaScript, polymorphism is achieved through method overriding or method overloading. Here's an explanation of these two types of polymorphism and their purpose:
+
+1. Method Overriding: Method overriding is a form of polymorphism where a subclass provides a different implementation of a method that is already defined in its superclass. By overriding a method, you can change its behavior in the subclass while maintaining the same method signature (name and parameters).
+
+   The purpose of method overriding in JavaScript is to:
+
+   - Customize behavior: By overriding methods, you can tailor the implementation of a method to suit the specific needs of a subclass. This allows you to modify or extend the behavior of the superclass method while keeping the same method name and interface.
+
+   - Follow the "open-closed" principle: Method overriding supports the principle of being "open for extension but closed for modification." You can add new functionality to a class by creating a subclass and overriding specific methods without modifying the original class. This promotes code reusability and maintainability.
+
+2. Method Overloading: Method overloading is a form of polymorphism where multiple methods with the same name but different parameters are defined within a class. The appropriate method to execute is determined by the number or types of arguments passed during the method invocation.
+
+   Note: JavaScript does not support method overloading natively. However, you can simulate method overloading by using conditional statements within a single method.
+
+   The purpose of method overloading (or simulating it) in JavaScript is to:
+
+   - Provide flexibility: By allowing a method to accept different combinations of arguments, you provide flexibility to the users of your code. They can choose the appropriate version of the method based on their needs.
+
+   - Enhance code readability: Method overloading, even if simulated, can improve code readability by providing descriptive method names that indicate the intended behavior based on the arguments used. This makes the code more self-explanatory and easier to understand.
+
+Here's an example that demonstrates both method overriding and simulated method overloading in JavaScript:
+
+
+class Shape {
+  calculateArea() {
+    return 0;
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  calculateArea() {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return this.width * this.height;
+  }
+}
+
+const shapes = [new Circle(5), new Rectangle(4, 6)];
+
+shapes.forEach((shape) => {
+  console.log(shape.calculateArea());
+});
+
+
+In the example above, the `Shape` class has a `calculateArea()` method, which is overridden in the `Circle` and `Rectangle` subclasses. Each subclass provides its own implementation of the method, allowing for polymorphic behavior.
+
+By creating instances of `Circle` and `Rectangle` and calling the `calculateArea()` method, we can see that the appropriate implementation is automatically invoked based on the actual type of the object. This demonstrates polymorphism in action, where different objects are treated uniformly through a common superclass interface.

@@ -1,0 +1,28 @@
+Q. What’s Constructor And Its Purpose?
+
+Ans-
+In JavaScript, a constructor is a special method that is used for creating and initializing objects created from a class or a blueprint. It is defined within a class and has the same name as the class itself. The constructor is automatically called when you create a new instance of the class using the new keyword.
+
+The purpose of a constructor is to set up the initial state of an object and define its properties and methods. It allows you to provide values for the object's properties at the time of creation. This is useful for ensuring that the object starts with the desired initial values and is in a valid state.
+
+Here's an example of a constructor in JavaScript:
+
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayHello() {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+  }
+}
+
+const person1 = new Person('John', 25);
+person1.sayHello(); // Output: Hello, my name is John and I'm 25 years old.
+
+
+In the example above, the `Person` class has a constructor that takes two parameters, `name` and `age`. The constructor assigns these values to the object's properties `this.name` and `this.age`. The `sayHello` method can access these properties and display a greeting message using them.
+
+Constructors are particularly useful when you want to create multiple objects with similar initial properties. By defining a constructor, you can easily create new instances of the class, each with its own set of property values.

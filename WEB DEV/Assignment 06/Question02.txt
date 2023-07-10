@@ -1,0 +1,46 @@
+Q. Explain This Keyword and Its Purpose?
+
+Ans-
+In JavaScript, the `this` keyword refers to the current execution context and is used to access properties and methods within an object or class. The specific value of `this` depends on how a function or method is called. The purpose of the `this` keyword is to provide a way to refer to the current object or the object on which a method is being called.
+
+The value of `this` can be different depending on the context in which it is used. Here are some common scenarios:
+
+1. Global scope: In the global scope (outside of any function or object), `this` refers to the global object, which is typically `window` in a browser or `global` in Node.js.
+
+2. Function context: When `this` is used within a regular function (not an arrow function), its value is determined by how the function is called. If the function is called as a method of an object, `this` refers to the object itself. If the function is called without an explicit context, `this` may refer to the global object (in non-strict mode) or be `undefined` (in strict mode).
+
+3. Method context: When a function is called as a method of an object, `this` refers to the object on which the method is being called. It allows the method to access the object's properties and perform operations using its data.
+
+4. Constructor context: Inside a constructor function, `this` refers to the newly created instance of the object being constructed. It allows you to set up the initial state of the object by assigning values to its properties.
+
+5. Event handlers: In event handlers, such as those used with DOM elements, `this` typically refers to the element that triggered the event.
+
+Here's an example that demonstrates the usage of `this` in different contexts:
+
+
+const obj = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+obj.sayHello(); // Output: Hello, my name is John
+
+const greeting = obj.sayHello;
+greeting(); // Output: Hello, my name is undefined (or window.name in non-strict mode)
+
+function Person(name) {
+  this.name = name;
+  this.sayHello = function() {
+    console.log(`Hello, my name is ${this.name}`);
+  };
+}
+
+const person1 = new Person('Alice');
+person1.sayHello(); // Output: Hello, my name is Alice
+
+
+In the example above, `this.name` within the `obj` object's `sayHello` method refers to the `name` property of the `obj` object. However, when the `sayHello` method is assigned to the `greeting` variable and called independently, `this.name` becomes undefined because `this` refers to the global object (`window` in this case).
+
+In the `Person` constructor, `this.name` refers to the `name` property of the newly created object (`person1`). Each instance of `Person` will have its own `name` property, allowing each object to store and access its own data.
