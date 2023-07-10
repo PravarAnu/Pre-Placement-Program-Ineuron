@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive Navbar</title>
+    <style>
+        #mobile {
+            display: none;
+            background-color: rgb(2, 126, 234);
+            width: 100%;
+            height: fit-content;
+            padding: 20px;
+            text-align: right;
+        }
+
+        #lists {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #desktop {
+            background-color: rgb(2, 126, 234);
+            width: 100%;
+            height: fit-content;
+            padding: 20px;
+            text-align: right;
+        }
+
+        #desktop ul {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 600px) {
+            #mobile {
+                display: block;
+            }
+
+            #desktop {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="mobile">
+        <button id="hamburger">|||</button>
+
+        <div id="lists">
+            <ul id="list">
+                <li>Home</li>
+                <li>About </li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="desktop">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+
+    <script>
+        let lists = document.getElementById("lists");
+
+        let hamburger = document.getElementById("hamburger");
+
+
+        hamburger.addEventListener('click', () => {
+
+            if (lists.style.display === "block") {
+                lists.style.display = "none";
+            } else {
+                lists.style.display = "block";
+            }
+        })
+    </script>
+</body>
+
+</html>
