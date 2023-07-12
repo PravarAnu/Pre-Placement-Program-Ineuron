@@ -1,0 +1,22 @@
+Q. What is a Media Query in CSS, and what is its purpose?
+
+Ans-
+A media query in CSS is a feature that allows you to apply different styles and rules based on specific characteristics of the device or media that is being used to view a web page. It allows you to create responsive designs that adapt and adjust their layout and appearance based on the capabilities and constraints of different devices, such as screen size, resolution, orientation, and even the type of media being used (print, screen, speech, etc.).
+
+The purpose of media queries is to provide a way to tailor the presentation of a web page to different devices or conditions, ensuring optimal user experience across various screen sizes and devices. By using media queries, you can create adaptive designs that respond to the characteristics of the device or viewport, allowing your web page to look and function well on a wide range of devices, from large desktop monitors to small mobile screens.
+
+Media queries work by specifying a set of conditions, typically based on the CSS `@media` rule, and applying styles and rules only when those conditions are met. For example, you can define different styles for screens with a maximum width of 768 pixels and apply them when the viewport matches that condition. This way, you can define different layouts, font sizes, or any other CSS properties based on the specific characteristics of the device or viewport.
+
+Here's an example of a media query that changes the background color of an element when the viewport width is less than or equal to 768 pixels:
+
+
+@media (max-width: 768px) {
+  .my-element {
+    background-color: lightblue;
+  }
+}
+
+
+In this example, the styles within the media query will be applied only when the viewport width is 768 pixels or less, allowing you to create a responsive design that adjusts the background color for smaller screens.
+
+Media queries are a fundamental tool for creating responsive web design, as they enable the adaptation of content and layout to different devices and screen sizes, ultimately improving the user experience across various platforms.

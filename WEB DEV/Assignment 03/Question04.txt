@@ -1,0 +1,33 @@
+Q. What is the purpose of using Media Queries for Print Media?
+
+Ans-
+Media queries for print media serve the purpose of applying specific styles and layout adjustments when a web page is printed or viewed in print preview mode. These media queries allow you to optimize the appearance and readability of the content when it is printed on paper or saved as a PDF.
+
+The purpose of using media queries for print media includes:
+
+1. Layout adjustments: When a web page is printed, the layout requirements may differ from the screen layout. Media queries for print media allow you to modify the positioning, sizing, and overall layout of elements to ensure that the printed version is well-organized and readable.
+
+2. Hiding or showing content: Some content on a web page may not be relevant or suitable for print. Media queries for print media enable you to hide certain elements or sections that are not necessary or may not translate well to a printed format. Conversely, you can show additional content that is specifically intended for print.
+
+3. Font and typography adjustments: Text that appears legible on a screen may not be as readable when printed. Media queries for print media enable you to adjust font sizes, line heights, and other typographic properties to enhance readability in the printed format.
+
+4. Page breaks and pagination: With media queries for print media, you can control how the content is divided into pages when printed. You can set rules to ensure that specific elements or sections begin on a new page, prevent unwanted page breaks within content, or control the overall pagination of the printed document.
+
+5. Background and color adjustments: Media queries for print media allow you to modify the background color, border styles, and other visual aspects of elements to ensure that the printed version is visually pleasing and consistent, even if it differs from the screen presentation.
+
+Here's an example of a media query for print media that adjusts the font size and hides a specific element when printing:
+
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  .print-only {
+    display: none;
+  }
+}
+
+In this example, the `@media print` media query targets print media specifically. It sets the body's font size to 12pt, ensuring better readability on printed pages. Additionally, the `.print-only` class is hidden (`display: none;`) when the web page is printed, allowing you to selectively exclude certain content from the printed version.
+
+By utilizing media queries for print media, you can optimize the layout, typography, and overall appearance of your web page when it is printed, delivering a more professional and user-friendly experience for users who prefer to print your content or save it as a physical document.

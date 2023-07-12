@@ -1,0 +1,35 @@
+Q.  How do you define a media query in CSS?
+
+Ans-
+In CSS, you can define a media query using the `@media` rule. Here's the basic syntax:
+
+
+@media mediaType and (mediaFeature) {
+  /* CSS rules and styles go here */
+}
+
+
+Let's break down the different parts:
+
+- `@media`: This is the keyword that signifies the beginning of a media query rule.
+- `mediaType`: This specifies the type of media being targeted. It can be one of the following:
+  - `all`: Applies to all media types.
+  - `print`: Applies to printers.
+  - `screen`: Applies to computer screens, tablets, and smartphones (default if not specified).
+  - `speech`: Applies to screen readers and speech synthesizers.
+  - You can also use other media types like `tv`, `aural`, etc., but they are less commonly used.
+- `and`: This is a logical operator that allows you to combine multiple media features.
+- `mediaFeature`: This defines the condition or feature that the media query is based on. It can be things like viewport width, viewport height, device orientation, resolution, and more. There are numerous media features available for use.
+- CSS rules and styles: These are the styles and rules that will be applied when the media query conditions are met.
+
+Here's an example that demonstrates a media query targeting screens with a maximum width of 768 pixels:
+
+
+@media screen and (max-width: 768px) {
+  /* CSS rules and styles for smaller screens go here */
+}
+
+
+In this example, the styles within the media query will be applied when the media type is a screen and the viewport width is 768 pixels or less. You can then define specific styles inside the media query block to adjust the layout, font sizes, or any other CSS properties to make your design responsive to smaller screens.
+
+You can have multiple media queries in your CSS file to target different conditions or combinations of conditions. This way, you can create a flexible and responsive design that adapts to various devices and screen sizes.

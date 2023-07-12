@@ -1,0 +1,28 @@
+Q. What is the purpose of the orientation media feature?
+
+Ans-
+The purpose of the `orientation` media feature is to target the orientation of the device's viewport, specifically whether it is in portrait or landscape mode. It allows you to apply different styles and layout adjustments based on the device's orientation.
+
+The `orientation` media feature has two possible values:
+
+- `portrait`: Indicates that the height of the viewport is greater than or equal to its width. This typically corresponds to a device being held vertically or in a portrait orientation.
+- `landscape`: Indicates that the width of the viewport is greater than its height. This corresponds to a device being held horizontally or in a landscape orientation.
+
+By using the `orientation` media feature in a media query, you can apply specific styles or layout adjustments based on the device's orientation, allowing you to create a more tailored and optimized experience for users.
+
+Here's an example of how the `orientation` media feature can be used in a media query:
+
+@media screen and (orientation: landscape) {
+  /* Styles and rules for landscape orientation go here */
+}
+
+@media screen and (orientation: portrait) {
+  /* Styles and rules for portrait orientation go here */
+}
+
+
+In this example, two media queries are used with different values for the `orientation` media feature. The first media query targets devices in landscape orientation, and the second media query targets devices in portrait orientation. You can then define specific styles and layout adjustments within each media query to accommodate the different orientations.
+
+For instance, you might want to rearrange the placement of certain elements, adjust the font sizes, or modify the spacing based on whether the device is in landscape or portrait mode. By utilizing the `orientation` media feature, you can adapt your design and optimize the user experience based on how the user is holding or viewing the device.
+
+Overall, the `orientation` media feature allows you to create more responsive and user-friendly designs that adapt to the device's orientation, ensuring that your web page looks and functions well in both portrait and landscape modes.
