@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <style>
+        body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            box-sizing: border-box;
+
+            background-color: #3c329a;
+        }
+
+        h1{
+            font-size: 128px;
+            color: #1e194d;
+        }
+
+        #clock{
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 48px;
+            font-size: 32px;
+            background-color: #6758f6;
+            border-radius: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PW SKILLS</h1>
+
+    <div id="clock">
+        <div class="box"><p id="hours"></p><p>Hours</p></div>
+        <div class="box"> <p id="minutes"></p> <p>Minutes</p></div>
+        <div class="box"><p id="seconds"></p><p>Seconds</p></div>
+    </div>
+
+
+    <script>
+        let hours = document.getElementById("hours");
+        let minutes = document.getElementById("minutes");
+        let seconds = document.getElementById("seconds");
+
+
+
+        function timer(){
+            let curr = new Date();
+
+            hours.innerText = `${curr.getHours()}`;
+
+            minutes.innerText = `${curr.getMinutes()}`;
+
+            seconds.innerText = `${curr.getSeconds()}`;
+
+            
+        }
+
+        setInterval(timer, 1000);
+
+    </script>
+</body>
+</html>

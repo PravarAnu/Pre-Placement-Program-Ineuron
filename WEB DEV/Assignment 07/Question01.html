@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        #result {
+            display: none;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid aliceblue;
+            padding: 10px;
+            background-color: #1c1a5e;
+        }
+
+
+
+        #question-block{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid aliceblue;
+            padding: 10px;
+            background-color: #1c1a5e;
+        }
+
+        #question{
+            background-color:#1a5e2e;
+            padding: 10px;
+        }
+
+        #inputBox{
+            padding: 10px;
+        }
+
+        #submit{
+            padding: 10px;
+            background-color: rgb(14, 121, 215);
+        }
+
+        #right{
+            background-color: #1a5e2e;
+            padding: 10px;
+        }
+
+        #wrong{
+            background-color: #ff0000;
+            padding: 10px;
+        }
+
+        #total{
+            background-color: #000ff0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quizz App</h1>
+    <div class="box">
+        <div id="question-block">
+            <h3>Question</h3>
+            <p id="question"></p>
+            <input type="text" id="inputBox" placeholder="Your Answer" />
+            <Button id="submit">Submit</Button>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <div id="result">
+            <h3>Score</h3>
+            <p id="right">Total Right Answer: <span id="correct"></span></p>
+
+            <p id="wrong">Total Wrong Answer: <span id="in-correct"></span></p>
+
+            <p id="total">Final Result: <span id="score"></span></p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        let questionBlock = document.getElementById("question-block");
+
+        let question = document.getElementById("question");
+        let inputBox = document.getElementById("inputBox");
+        let button = document.getElementById("submit");
+
+        let resultBlock = document.getElementById("result");
+        let totalCorrect = document.getElementById("correct");
+        let totalWrong = document.getElementById("in-correct");
+        let total = document.getElementById("score");
+
+        const questionList = [
+            {
+                question: "What is the capital of India",
+                answer: "new delhi"
+            },
+            {
+                question: "What is checmical formula of carbon",
+                answer: "c"
+            },
+            {
+                question: "Who invented Python Programming Language",
+                answer: "guido van russom"
+            }
+        ]
+
+
+        let score = 0;
+        let index = 0;
+
+        function nextQuestion(index) {
+            resultBlock.style.display = "none";
+            if (index == questionList.length) {
+                showResult();
+            } else {
+                question.innerHTML = questionList[index].question;
+            }
+
+        }
+
+        function showResult() {
+            questionBlock.style.display = "none";
+            resultBlock.style.display = "flex";
+            totalCorrect.innerText = score;
+            totalWrong.innerText = questionList.length - score;
+            total.innerText = score * 2;
+        }
+
+        nextQuestion(index);
+
+        button.addEventListener('click', () => {
+            if (index <= questionList.length) {
+                let text = inputBox.value.toLowerCase();
+
+                if (text === questionList[index].answer) {
+                    score++;
+                }
+
+                inputBox.value = "";
+                index++;
+
+                nextQuestion(index);
+            } else {
+                showResult();
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

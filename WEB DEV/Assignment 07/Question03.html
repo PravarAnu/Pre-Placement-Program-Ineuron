@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github User</title>
+    <style>
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+
+        #textBox{
+            margin-top: 32px;
+            padding: 10px 20px;
+        }
+
+        #getUser{
+
+            padding: 10px 20px;
+            background-color: blue;
+            color: aliceblue;
+        }
+
+        #user {
+            display: none;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+            margin-top: 100px;
+            border: 2px solid rgb(255, 255, 255);
+            padding: 20px;
+        }
+
+
+        #user-img{
+            margin: auto;
+            border-radius: 20px;
+            width: 200px;
+        }
+
+        .user-details {
+            margin-top: 32px;
+            margin-bottom: 32px;
+            display: grid;
+            row-gap: 28px;
+            column-gap: 28px;
+            font-size: large;
+            text-align: left;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .user-details div{
+            background-color: brown;
+            padding: 10px;
+
+        }
+
+        .user-details span {
+            font-size: medium;
+        }
+
+
+    </style>
+</head>
+
+<body>
+        <div>
+            <input type="text" id="textBox" placeholder="Search a Github User" />
+    
+            <button id="getUser">Get Data</button>
+        </div>
+
+        <div id="user">
+            <img id="user-img" alt="user-image"  />
+            <div class="user-details">
+                <div>Name : <span id="name"></span></div>
+
+                <div>Portfolio : <span id="portfolio"></span></div>
+
+                <div>Location : <span id="location"></span></div>
+
+                <div>Public Repos : <span id="public-repos"></span></div>
+
+                <div>Followers : <span id="followers"></span></div>
+
+                <div>Bio : <span id="bio"></span></div>
+            </div>
+        </div>
+
+
+    <script>
+        let username = document.getElementById("textBox");
+
+        let getUser = document.getElementById("getUser");
+
+        let user = document.getElementById("user");
+
+        let userImg = document.getElementById("user-img");
+
+        let name = document.getElementById("name");
+
+        let portfolio = document.getElementById("portfolio");
+
+        let Location = document.getElementById("location");
+
+        let publicRepos = document.getElementById("public-repos");
+
+        let followers = document.getElementById("followers");
+
+        let bio = document.getElementById("bio");
+
+
+
+        getUser.addEventListener('click', async () => {
+            
+            const foundUser = await fetch(`https://api.github.com/users/${username.value}`);
+
+
+            const result = await foundUser.json();
+
+            console.log(result);
+
+            userImg.src = result.avatar_url;
+
+            name.innerText = result.name;
+
+            portfolio.innerText = result.blog;
+
+            Location.innerText = result.location;
+
+            publicRepos.innerText = result.public_repos;
+
+            followers.innerText = result.followers;
+
+
+            bio.innerText = result.bio;
+
+            user.style.display = "block";
+        })
+
+
+    </script>
+</body>
+
+</html>
